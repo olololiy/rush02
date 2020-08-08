@@ -1,2 +1,13 @@
 если ты это видишь, то оно работает.
 Напиши что сюда своё послание.
+
+кстати забыл написать последовательность действий
+для начала зарегайтесь на гидхабе
+затем
+echo "# rush02" >> README.md // тут вы добавляете сво> документ
+git init
+git add README.md// тут тоже название вашего документа
+git commit -m "first commit"
+git remote add origin https://github.com/olololiy/rush02.git
+git push -u origin master
+дальше он поросит ввести ваш логин с гитхаба и пароль.
