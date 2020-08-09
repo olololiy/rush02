@@ -21,7 +21,7 @@ void		trim_right(char *str)
 	*(++str) = 0;
 }
 
-char 		trim_side(char *str)
+char 		*trim_side(char *str)
 {
 	char *ret;
 	char *start;
