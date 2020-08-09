@@ -26,10 +26,36 @@ extern int g_input_num_error;/*1 - валидный ключ, 0 - слишком
 extern int g_is_first;/*вернет 1 если ключ и значение первые*/
 extern int g_eof;/*проверка на конец файла, 1 - конец, 0 - нет*/
 
-/*функция создания элемента*/
-/*функция урезания пробелов*/
-/*функция построения файла*/
-/*ft_strlen*/
-/*ft_strcpy*/
-/*ft_st_is_equal*/
-/*всё, что понадобится и появится дальше, записывайте сюда*/
+t_dict				*create_ele(char *key, char *val);
+void				push_front(char *key, char *val);
+void				build_dict(char *file);
+void				insert_key_value(char *str);
+char				*get_val(char *key);
+
+char				*trim_left(char *str);
+void				trim_right(char *str);
+char				*trim_side(char *str);
+char				*trim_allocated_str(char *str);
+
+int					ft_strlen(char *str);
+void				ft_strcpy(char *dst, char *begin, char *end);
+int					ft_is_equal(char *a, char *b);
+
+char				*read_line(int fd);
+char				*read_num(void);
+
+void				print(char *str);
+void				ft_putchar(char c);
+void				ft_putstr(char *str);
+void				print_error_msg(char *str);
+
+int					is_white_space(char c);
+int					ft_is_number(char c);
+int					ft_is_valid_num(char *str);
+int					is_valid_key_value(char *str);
+
+void				rush(int argc, char *argv[]);
+void				convert_num(char *num);
+char				*build_unit_str(int cnt);
+
+#endif
