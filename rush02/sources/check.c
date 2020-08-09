@@ -1,3 +1,5 @@
+#include "rush02.h"
+
 int		is_white_space(char c)
 {
 	return (c == ' ' || (9 <= c && c <= 13));
