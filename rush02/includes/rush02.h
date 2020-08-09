@@ -26,36 +26,36 @@ extern int g_input_num_error;/*1 - валидный ключ, 0 - слишком
 extern int g_is_first;/*вернет 1 если ключ и значение первые*/
 extern int g_eof;/*проверка на конец файла, 1 - конец, 0 - нет*/
 
-t_dict				*create_ele(char *key, char *val);
-void				push_front(char *key, char *val);
-void				build_dict(char *file);
-void				insert_key_value(char *str);
-char				*get_val(char *key);
+t_dict				*create_ele(char *key, char *val); /*создает элемент для словаря*/
+void				push_front(char *key, char *val); /*присваивает ключ и значение для дальнейшего добавления в словарь*/
+void				build_dict(char *file); /*создает новый словарь для записи того, что мы получим из агрументов*/
+void				insert_key_value(char *str); /*вписывает в словарь ключ и значение в виде 20 : лол кек*/
+char				*get_val(char *key); /*получает из словаря значение, присущее данному ключу*/
 
-char				*trim_left(char *str);
-void				trim_right(char *str);
+char				*trim_left(char *str); /*прототипы функций, работающих с ненужными пробелами*/
+void				trim_right(char *str); 
 char				*trim_side(char *str);
 char				*trim_allocated_str(char *str);
 
-int					ft_strlen(char *str);
+int				ft_strlen(char *str); /*прототипы функций, работающих со строками*/
 void				ft_strcpy(char *dst, char *begin, char *end);
-int					ft_is_equal(char *a, char *b);
+int				ft_is_equal(char *a, char *b);
 
-char				*read_line(int fd);
-char				*read_num(void);
+char				*read_line(int fd); /*читает содержимое "строки" в словаре (20 : лол кек)*/
+char				*read_num(void); /*читает ключ*/
 
-void				print(char *str);
+void				print(char *str); /*прототипы функций для вывода*/
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 void				print_error_msg(char *str);
 
-int					is_white_space(char c);
-int					ft_is_number(char c);
-int					ft_is_valid_num(char *str);
-int					is_valid_key_value(char *str);
+int					is_white_space(char c); /*проверяет наличие пробела, 1 - есть, 0 - нет*/
+int					ft_is_number(char c); /*проверяет, является ли чар числом, 1 - да, 0 - нет*/
+int					ft_is_valid_num(char *str); /*проверяет, является ли число, записанное в виде чара действительным*/
+int					is_valid_key_value(char *str); /*проверяет, валидное ли значение ключа*/
 
-void				rush(int argc, char *argv[]);
-void				convert_num(char *num);
+void				rush(int argc, char *argv[]); /*прототип раша, получающего агрументы из меина, отправляет ниже*/
+void				convert_num(char *num); /*преобразовывает число в стринг*/
 char				*build_unit_str(int cnt);
 
 #endif
